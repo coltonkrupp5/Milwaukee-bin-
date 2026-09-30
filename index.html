@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Milwaukee Bin Co | Moving Tote Rental in Milwaukee &amp; Wauwatosa</title>
+<meta name="description" content="Rent heavy-duty HDX 17 and 27 gallon moving bins. Free drop-off and pick-up within 30 minutes of Milwaukee. Packages from $99.">
+<meta property="og:title" content="Milwaukee Bin Co | Moving Tote Rental">
+<meta property="og:description" content="Pack in totes, not cardboard. Free drop-off and pick-up within 30 minutes of Milwaukee. Packages from $99.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#1F2023">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<script>
+/* ===== EDIT YOUR DETAILS HERE ===== */
+window.MBC_CONFIG = {
+  // ---- EDIT THESE ----------------------------------------
+  phone: "(920) 251-8979",                // your phone number
+  email: "info@milwaukeebinco.com",   // your email
+  address: "[YOUR ADDRESS]",         // Wauwatosa pickup address (street only)
+  hours: "[YOUR HOURS]",          // delivery / pickup hours
+  replacementFee: "[FEE]",              // fee per bin damaged beyond normal wear
+  formEndpoint: "",                    // Formspree URL, e.g. https://formspree.io/f/abcdwxyz
+  depositLink: ""                      // Square or Stripe $50 payment link
+  // --------------------------------------------------------
+};
+</script>
+<style>
+html{scroll-behavior:smooth}
+body{margin:0;background:#1F2023}
+
+#mbc{--black:#1F2023;--yellow:#F2B705;--ground:#EDEEEA;--white:#FFFFFF;--blue:#1B4B72;--gray:#4A4D52;--line:#C9CBC5;
+  width:100%;background:var(--ground);color:var(--black);
+  font-family:"Atkinson Hyperlegible",system-ui,sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+#mbc *{box-sizing:border-box}
+#mbc h1,#mbc h2,#mbc h3{font-family:"Archivo",Arial Black,sans-serif;font-weight:800;margin:0;letter-spacing:-0.02em;line-height:1.05;color:inherit;text-transform:none}
+#mbc h1{font-stretch:125%;font-weight:900;font-size:clamp(40px,6vw,68px);line-height:.98;letter-spacing:-0.03em}
+#mbc h2{font-stretch:115%;font-size:clamp(30px,4vw,44px)}
+#mbc h3{font-stretch:115%;font-size:clamp(22px,2.4vw,30px)}
+#mbc p{margin:0}
+#mbc a{color:var(--blue)}
+#mbc button{font-family:inherit;cursor:pointer}
+#mbc a:focus-visible,#mbc button:focus-visible,#mbc input:focus-visible,#mbc summary:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+#mbc .wrap{max-width:1200px;margin:0 auto;padding-left:32px;padding-right:32px}
+#mbc .muted{color:var(--gray)}
+#mbc .dark{background:var(--black);color:var(--white)}
+#mbc .dark .muted{color:#D6D7D3}
+#mbc .btn{display:inline-block;text-decoration:none;font-weight:700;font-size:18px;padding:16px 28px;border-radius:6px;border:0;text-align:center;line-height:1.2}
+#mbc .btn-y{background:var(--yellow);color:var(--black)}
+#mbc .btn-o{border:2px solid var(--white);color:var(--white);background:transparent;padding:14px 26px}
+#mbc .btn-d{background:var(--black);color:var(--white)}
+#mbc .grid{display:grid;gap:28px}
+#mbc .cols-auto{grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr))}
+#mbc .cols-4{grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr))}
+#mbc .card{background:var(--white);border-radius:10px;padding:36px}
+#mbc .card.dark{background:var(--black);color:var(--white)}
+#mbc section{padding-top:96px;padding-bottom:64px}
+#mbc .head{display:flex;flex-direction:column;gap:14px;max-width:44em;margin-bottom:40px}
+#mbc .head p{font-size:19px;color:var(--gray)}
+
+/* nav */
+#mbc .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;padding-top:18px;padding-bottom:18px}
+#mbc .logo{display:flex;align-items:center;gap:12px;color:var(--white);text-decoration:none;font-family:"Archivo",sans-serif;font-stretch:125%;font-weight:800;font-size:20px}
+#mbc .logo i{display:flex;flex-direction:column;gap:2px;width:34px}
+#mbc .logo i b:first-child{height:7px;background:var(--yellow);border-radius:3px}
+#mbc .logo i b:last-child{height:16px;background:var(--gray);border-radius:0 0 4px 4px}
+#mbc .links{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+#mbc .links a{color:var(--white);text-decoration:none;font-size:16px}
+#mbc .links a.btn{color:var(--black);padding:12px 20px;font-size:16px}
+
+/* hero */
+#mbc .hero{padding-top:64px;padding-bottom:0;overflow:hidden}
+#mbc .hero .grid{align-items:end;gap:56px}
+#mbc .hero-copy{padding-bottom:88px;display:flex;flex-direction:column;gap:26px}
+#mbc .hero-copy p.lead{font-size:21px;color:#D6D7D3;max-width:30em}
+#mbc .hero-copy .btns{display:flex;gap:16px;flex-wrap:wrap}
+#mbc .hero-copy small{font-size:15px;color:#B9BBB6}
+#mbc .cart{display:flex;flex-direction:column;align-items:center;gap:4px;margin:0 auto}
+#mbc .lid{background:var(--yellow);border-radius:6px 6px 3px 3px}
+#mbc .tub{background:#2E3034;clip-path:polygon(0 0,100% 0,96% 100%,4% 100%);display:flex;align-items:center;justify-content:center;font-family:"Archivo",sans-serif;font-weight:800;color:var(--yellow)}
+#mbc .dolly{width:300px;height:22px;background:var(--gray);border-radius:4px}
+#mbc .wheels{width:300px;display:flex;justify-content:space-between;padding:0 18px}
+#mbc .wheels b{width:26px;height:26px;border-radius:50%;background:#0F1012;border:5px solid var(--gray)}
+
+/* strip */
+#mbc .strip{background:var(--yellow);padding:36px 0}
+#mbc .strip strong{display:block;font-size:19px;margin-bottom:6px}
+#mbc .strip span{font-size:16px}
+
+/* bins */
+#mbc .bin-top{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:18px}
+#mbc dl{margin:18px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 24px;font-size:16px}
+#mbc dt{color:var(--gray)}
+#mbc dd{margin:4px 0 0;font-weight:700}
+
+/* steps */
+#mbc ol.steps{list-style:none;margin:0;padding:0}
+#mbc ol.steps li{border-top:4px solid var(--black);padding-top:18px;display:flex;flex-direction:column;gap:8px}
+#mbc ol.steps .n{font-family:"Archivo",sans-serif;font-weight:900;font-size:40px;color:var(--blue);line-height:1}
+#mbc ol.steps strong{font-size:20px}
+#mbc ol.steps span{font-size:16px;color:var(--gray)}
+
+/* pricing */
+#mbc .pricing{background:var(--white)}
+#mbc .pkgs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:16px}
+#mbc .pkg{border:2px solid var(--black);border-radius:10px;padding:26px 22px;display:flex;flex-direction:column;gap:12px}
+#mbc .pkg .name{font-weight:700}
+#mbc .pkg .price{font-family:"Archivo",sans-serif;font-stretch:110%;font-weight:900;font-size:48px;line-height:1}
+#mbc .pkg .mix{font-size:16px}
+#mbc .pkg .dol{font-size:15px;color:var(--gray)}
+#mbc .extras{margin-top:32px;border-top:1px solid var(--line);padding-top:20px}
+#mbc .extras strong{display:block;font-size:18px;margin-bottom:6px}
+#mbc .extras span{font-size:16px;color:var(--gray)}
+
+/* area */
+#mbc .zone-top{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:16px}
+#mbc .badge{font-weight:700;font-size:16px;padding:6px 12px;border-radius:4px}
+#mbc .zone p{font-size:17px;line-height:1.7}
+#mbc .zone p.sub{font-size:16px;margin-bottom:10px}
+#mbc .banner{background:var(--yellow);border-radius:10px;padding:28px 36px;margin-top:28px}
+#mbc .banner h3{font-size:22px;margin-bottom:8px;font-stretch:100%}
+
+/* quote */
+#mbc .quote .grid{align-items:start;gap:56px}
+#mbc fieldset{border:0;margin:0 0 28px;padding:0}
+#mbc legend{font-weight:700;font-size:18px;padding:0 0 12px}
+#mbc .opts{display:flex;flex-wrap:wrap;gap:10px}
+#mbc .opt{min-height:48px;padding:10px 18px;border-radius:6px;font-size:16px;font-weight:700;border:2px solid #6B6E73;background:transparent;color:var(--white)}
+#mbc .opt[aria-pressed="true"]{border-color:var(--yellow);background:var(--yellow);color:var(--black)}
+#mbc .steppers{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+#mbc .stepper{display:flex;align-items:center;gap:14px;margin-top:12px}
+#mbc .stepper button{width:48px;height:48px;border-radius:6px;border:2px solid var(--white);background:transparent;color:var(--white);font-size:24px;font-weight:700;line-height:1}
+#mbc .stepper output{font-size:24px;font-weight:700;min-width:40px;text-align:center}
+#mbc .receipt{background:var(--white);color:var(--black);border-radius:10px;padding:36px;display:flex;flex-direction:column;gap:18px}
+#mbc .total{font-family:"Archivo",sans-serif;font-stretch:110%;font-weight:900;font-size:64px;line-height:1}
+#mbc .lines{border-top:2px solid var(--black)}
+#mbc .row{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid var(--line);font-size:17px}
+#mbc .due{background:var(--ground);border-radius:8px;padding:16px 18px;font-size:16px}
+#mbc .due .row{border:0;padding:4px 0;font-size:16px}
+#mbc .fine{font-size:14px;color:var(--gray)}
+
+/* faq */
+#mbc .faq{max-width:900px}
+#mbc details{border-bottom:1px solid var(--line);padding:22px 0}
+#mbc summary{font-size:20px;font-weight:700;cursor:pointer}
+#mbc details p{margin-top:14px;color:var(--gray)}
+#mbc .faq-list{border-top:2px solid var(--black)}
+
+/* footer */
+#mbc footer .grid{padding-top:72px;padding-bottom:48px;gap:40px}
+#mbc footer strong{display:block;font-size:18px;margin-bottom:8px}
+#mbc footer .big{font-family:"Archivo",sans-serif;font-stretch:125%;font-weight:800;font-size:26px;display:block;margin-bottom:10px}
+#mbc footer a{color:var(--yellow)}
+#mbc footer .legal{border-top:1px solid #3A3C40;padding-top:20px;padding-bottom:36px;font-size:14px;color:#B9BBB6}
+
+/* reservation */
+#mbc label{display:block;font-weight:700;font-size:16px;margin-bottom:8px}
+#mbc input[type=text],#mbc input[type=tel],#mbc input[type=email],#mbc input[type=date]{width:100%;font:inherit;font-size:17px;padding:14px;border:2px solid #8A8D92;border-radius:6px;background:var(--white);color:var(--black)}
+#mbc .field{margin-bottom:20px}
+#mbc .two{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:16px}
+#mbc .err{background:#FBE9E7;color:#8A1C12;border-radius:6px;padding:14px 16px;margin-bottom:20px;font-size:16px}
+#mbc .summary{background:var(--black);color:var(--white);border-radius:10px;padding:36px;display:flex;flex-direction:column;gap:18px}
+#mbc .summary .lines{border-top-color:var(--white)}
+#mbc .summary .row{border-bottom-color:#3A3C40}
+#mbc .summary .pay{background:var(--yellow);color:var(--black);border-radius:8px;padding:20px}
+#mbc .summary .pay .row{border:0;padding:4px 0}
+#mbc [hidden]{display:none !important}
+
+@media (max-width:640px){
+  #mbc .wrap{padding-left:20px;padding-right:20px}
+  #mbc section{padding-top:64px;padding-bottom:40px}
+  #mbc .card,#mbc .receipt,#mbc .summary{padding:24px}
+  #mbc .links{gap:14px}
+  #mbc .links a:not(.btn){display:none}
+  #mbc .hero-copy{padding-bottom:48px}
+  #mbc .cart{transform:scale(.8);transform-origin:bottom center;margin-bottom:-30px}
+  #mbc .total{font-size:52px}
+}
+@media (prefers-reduced-motion:reduce){#mbc *{transition:none !important;scroll-behavior:auto !important}}
+</style>
+</head>
+<body>
+<div id="mbc">
+
+<!-- ================= MAIN SITE ================= -->
+<div id="mbc-site">
+
+<header class="dark">
+  <div class="wrap nav">
+    <a class="logo" href="#mbc-top"><i><b></b><b></b></i>Milwaukee Bin Co</a>
+    <nav class="links" aria-label="Main">
+      <a href="#mbc-bins">The bins</a>
+      <a href="#mbc-pricing">Pricing</a>
+      <a href="#mbc-area">Service area</a>
+      <a href="#mbc-faq">FAQ</a>
+      <a class="btn btn-y" href="#mbc-quote">Get a quote</a>
+    </nav>
+  </div>
+</header>
+
+<div id="mbc-top" class="dark hero">
+  <div class="wrap grid cols-auto">
+    <div class="hero-copy">
+      <h1>Pack in totes, not cardboard.</h1>
+      <p class="lead">Rent heavy-duty HDX 17 and 27 gallon bins for your move. Drop-off and pick-up are free anywhere within 30 minutes of Milwaukee. We bring them to your door and collect them from your new place when you're unpacked.</p>
+      <div class="btns">
+        <a class="btn btn-y" href="#mbc-quote">Build your quote</a>
+        <a class="btn btn-o" href="#mbc-pricing">See packages from $99</a>
+      </div>
+      <small>Two-week rental, dolly and labels included with every package.</small>
+    </div>
+    <div class="cart" aria-hidden="true">
+      <div class="lid" style="width:230px;height:16px"></div>
+      <div class="tub" style="width:214px;height:96px;font-size:20px">17 gal</div>
+      <div class="lid" style="width:280px;height:20px"></div>
+      <div class="tub" style="width:262px;height:150px;font-size:24px">27 gal</div>
+      <div class="dolly"></div>
+      <div class="wheels"><b></b><b></b></div>
+    </div>
+  </div>
+</div>
+
+<div class="strip">
+  <div class="wrap grid cols-4">
+    <div><strong>No taping, no folding</strong><span>Snap-fit lids close in a second and open just as fast at the new place.</span></div>
+    <div><strong>Stacks without crushing</strong><span>Rigid walls hold their shape in the truck, the basement or the garage.</span></div>
+    <div><strong>Nothing to haul to the curb</strong><span>When you're unpacked, we take the bins away. No flattened boxes left over.</span></div>
+    <div><strong>Cleaned between every rental</strong><span>Each bin is washed and wiped down before it reaches your door.</span></div>
+  </div>
+</div>
+
+<section id="mbc-bins" class="wrap">
+  <div class="head">
+    <h2>Two sizes that stack together</h2>
+    <p>Every package mixes both sizes: the big bins for linens, clothes and toys, the smaller ones for books, dishes and anything heavy.</p>
+  </div>
+  <div class="grid cols-auto">
+    <div class="card">
+      <div class="bin-top"><h3>HDX 27 gallon</h3><span class="muted">The workhorse</span></div>
+      <p>Room for a full closet shelf of sweaters, bedding, pillows or a kid's toy bin. Keep it light enough to lift comfortably.</p>
+      <dl>
+        <div><dt>Outside, approx.</dt><dd>28½ × 19⅝ × 15½ in</dd></div>
+        <div><dt>Best for</dt><dd>Soft goods, bulky items</dd></div>
+        <div><dt>Lid</dt><dd>Snap-fit, stackable</dd></div>
+        <div><dt>Self-pickup rate</dt><dd>$2.50 per bin, per week</dd></div>
+      </dl>
+    </div>
+    <div class="card">
+      <div class="bin-top"><h3>HDX 17 gallon</h3><span class="muted">For the heavy stuff</span></div>
+      <p>Smaller footprint keeps books, pantry goods, dishes and tools at a weight you can actually carry up a flight of stairs.</p>
+      <dl>
+        <div><dt>Inside, approx.</dt><dd>21 × 13 × 11¾ in</dd></div>
+        <div><dt>Best for</dt><dd>Books, kitchen, garage</dd></div>
+        <div><dt>Lid</dt><dd>Snap-fit, stackable</dd></div>
+        <div><dt>Self-pickup rate</dt><dd>$2 per bin, per week</dd></div>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" style="padding-top:32px">
+  <div class="head"><h2>How a rental works</h2></div>
+  <ol class="steps grid cols-4">
+    <li><span class="n">1</span><strong>Pick a package</strong><span>Choose by home size and tell us your drop-off and pick-up addresses.</span></li>
+    <li><span class="n">2</span><strong>We drop off the bins</strong><span>Clean bins, a dolly and labels arrive at your current home.</span></li>
+    <li><span class="n">3</span><strong>Pack, move, unpack</strong><span>You have two full weeks. Need longer? Add a week any time before pick-up.</span></li>
+    <li><span class="n">4</span><strong>We pick them up</strong><span>Stack the empty bins by the door of your new place and we collect them.</span></li>
+  </ol>
+</section>
+
+<section id="mbc-pricing" class="pricing">
+  <div class="wrap">
+    <div class="head">
+      <h2>Packages</h2>
+      <p>Two-week rental. Includes free drop-off and pick-up within 30 minutes of Milwaukee, dollies and labels.</p>
+    </div>
+    <div class="pkgs" id="mbc-pkgs"></div>
+    <div class="extras grid cols-4">
+      <div><strong>Extra bins</strong><span>$7 each, added to any package for the same two weeks.</span></div>
+      <div><strong>Extra weeks</strong><span>$1 per bin, per week. Let us know before your pick-up day.</span></div>
+      <div><strong>$50 refundable deposit</strong><span>Holds your bins and date. Full payment is due by your drop-off date.</span></div>
+      <div><strong>Bins only, self-pickup</strong><span>$2 per 17 gal and $2.50 per 27 gal each week, 10-bin minimum, from our Wauwatosa location.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="mbc-area" class="wrap">
+  <div class="head">
+    <h2>Free drop-off and pick-up within 30 minutes of Milwaukee</h2>
+    <p>Drop off at your old address and pick up at your new one. Each stop is priced on its own, so a move from Wauwatosa to Racine is one free stop and one $60 stop.</p>
+  </div>
+  <div class="grid cols-auto">
+    <div class="card dark zone">
+      <div class="zone-top"><h3>Within 30 minutes</h3><span class="badge" style="background:var(--yellow);color:var(--black)">Free</span></div>
+      <p class="sub muted">Anywhere about 30 minutes or less from Milwaukee, including</p>
+      <p>All of Milwaukee, Wauwatosa, West Allis, Brookfield, Elm Grove, Greenfield, Shorewood, Whitefish Bay, Fox Point, Glendale, Bay View, St. Francis, Cudahy, Greendale, Hales Corners, Franklin, Oak Creek, New Berlin, Waukesha, Pewaukee, Menomonee Falls, Germantown, Mequon and Cedarburg</p>
+    </div>
+    <div class="card zone" style="border:2px solid var(--black)">
+      <div class="zone-top"><h3>Farther out</h3><span class="badge" style="background:var(--blue);color:var(--white)">$60 trip charge per stop</span></div>
+      <p class="sub muted">More than 30 minutes from Milwaukee</p>
+      <p>A $60 trip charge applies to each drop-off or pick-up more than 30 minutes from Milwaukee, such as Racine, Kenosha, West Bend, Oconomowoc, Hartford or Port Washington.</p>
+    </div>
+  </div>
+  <div class="banner">
+    <h3>Skip the trip charge</h3>
+    <p>Pick up your bins, return them, or both at our Wauwatosa location, <span data-mbc="address"></span>, at no charge. Handy if you're moving somewhere more than 30 minutes out.</p>
+  </div>
+</section>
+
+<section id="mbc-quote" class="dark quote">
+  <div class="wrap grid cols-auto">
+    <div>
+      <div class="head" style="margin-bottom:32px">
+        <h2>Build your quote</h2>
+        <p style="color:#D6D7D3">Pick a package and how the bins get to you and back. Your total updates as you go.</p>
+      </div>
+      <fieldset><legend>Home size</legend><div class="opts" id="mbc-opt-pkg"></div></fieldset>
+      <fieldset><legend>Getting the bins</legend><div class="opts" id="mbc-opt-drop"></div></fieldset>
+      <fieldset><legend>Returning the bins</legend><div class="opts" id="mbc-opt-pick"></div></fieldset>
+      <div class="steppers">
+        <div><strong style="font-size:18px">Extra bins</strong>
+          <div class="stepper"><button type="button" data-step="bins" data-d="-5" aria-label="Remove 5 bins">−</button><output id="mbc-xbins">0</output><button type="button" data-step="bins" data-d="5" aria-label="Add 5 bins">+</button></div></div>
+        <div><strong style="font-size:18px">Extra weeks</strong>
+          <div class="stepper"><button type="button" data-step="weeks" data-d="-1" aria-label="Remove a week">−</button><output id="mbc-xweeks">0</output><button type="button" data-step="weeks" data-d="1" aria-label="Add a week">+</button></div></div>
+      </div>
+    </div>
+    <div class="receipt">
+      <div>
+        <div class="muted" style="font-size:16px">Your estimate</div>
+        <div class="total" id="mbc-total">$0</div>
+        <div class="muted" style="font-size:16px" id="mbc-sum"></div>
+      </div>
+      <div class="lines" id="mbc-lines"></div>
+      <div class="due">
+        <div class="row"><span>Due to reserve</span><strong>$50 refundable deposit</strong></div>
+        <div class="row"><span>Due by drop-off date</span><strong id="mbc-due">$0</strong></div>
+      </div>
+      <button type="button" class="btn btn-y" id="mbc-go-reserve">Reserve these bins</button>
+      <p class="fine">Estimate before tax. Bins damaged beyond normal moving wear carry a <span data-mbc="replacementFee"></span> replacement charge per bin.</p>
+    </div>
+  </div>
+</section>
+
+<section id="mbc-faq" class="wrap faq">
+  <div class="head"><h2>Questions people ask</h2></div>
+  <div class="faq-list">
+    <details><summary>How many bins do I need?</summary><p>A rough guide: 20 for a studio, 30 for a one-bedroom, 45 for two bedrooms, 60 for three and 80 for four. If you have a lot of books or a packed garage, go one size up or add extra bins.</p></details>
+    <details><summary>How does payment work?</summary><p>A $50 refundable deposit reserves your bins and drop-off date. The full rental is due by your drop-off date. Your deposit is refunded once the bins are picked up with only normal moving wear.</p></details>
+    <details><summary>I'm moving more than 30 minutes away. What does that cost?</summary><p>There's a $60 trip charge for each drop-off or pick-up more than 30 minutes from Milwaukee. To avoid it, pick up or return the bins at our Wauwatosa location for free.</p></details>
+    <details><summary>How early can you drop them off?</summary><p>Most people want them 3 to 5 days before moving day. Your two weeks start on drop-off, so add a week if you like to pack early.</p></details>
+    <details><summary>Do I need to be home for drop-off or pick-up?</summary><p>No. Leave the empty bins stacked somewhere we can reach them, like a porch, garage or lobby, and text us when they're ready.</p></details>
+    <details><summary>How much can I put in one bin?</summary><p>Keep each bin to what you can lift safely, around 50 pounds. Heavy items like books go in the 17 gallon bins.</p></details>
+    <details><summary>Do I have to clean the bins before you pick them up?</summary><p>Just empty them. We wash every bin before it goes out again.</p></details>
+    <details><summary>Can I use the bins for storage instead of a move?</summary><p>Yes. Remodels, basement cleanouts and staging a home for sale all work. Book a package and add weeks as needed.</p></details>
+  </div>
+</section>
+
+</div><!-- /site -->
+
+<!-- ================= RESERVATION PAGE ================= -->
+<div id="mbc-reserve" hidden>
+  <header class="dark">
+    <div class="wrap nav">
+      <span class="logo"><i><b></b><b></b></i>Milwaukee Bin Co</span>
+      <button type="button" class="btn btn-o" style="font-size:16px;padding:10px 18px" data-go="site">Back to quote</button>
+    </div>
+  </header>
+  <section class="wrap" style="padding-top:64px">
+    <div class="head">
+      <h1 style="font-stretch:115%;font-size:clamp(36px,5vw,52px)">Reserve your bins</h1>
+      <p>Tell us where and when to drop them off. A $50 refundable deposit holds your bins and date.</p>
+    </div>
+    <div class="grid cols-auto" style="gap:40px;align-items:start">
+      <form class="card" id="mbc-form" novalidate>
+        <h3 style="font-size:22px;font-stretch:100%;margin-bottom:20px">Drop-off details</h3>
+        <div class="field"><label for="mbc-dropAddress">Drop-off address <span class="muted" style="font-weight:400" id="mbc-drop-note" hidden>(not needed, you're picking up in Wauwatosa)</span></label><input type="text" id="mbc-dropAddress" name="dropAddress" autocomplete="street-address" placeholder="Street, city, ZIP"></div>
+        <div class="field"><label for="mbc-dropDate">Date you need them</label><input type="date" id="mbc-dropDate" name="dropDate"></div>
+        <div class="field"><label for="mbc-pickAddress">Pick-up address, if different <span class="muted" style="font-weight:400">(optional)</span></label><input type="text" id="mbc-pickAddress" name="pickAddress" placeholder="Your new address"></div>
+        <h3 style="font-size:22px;font-stretch:100%;margin:12px 0 20px">Your contact info</h3>
+        <div class="field"><label for="mbc-name">Name</label><input type="text" id="mbc-name" name="name" autocomplete="name"></div>
+        <div class="two">
+          <div class="field"><label for="mbc-phone">Phone</label><input type="tel" id="mbc-phone" name="phone" autocomplete="tel"></div>
+          <div class="field"><label for="mbc-email">Email</label><input type="email" id="mbc-email" name="email" autocomplete="email"></div>
+        </div>
+        <div class="err" id="mbc-err" role="alert" hidden></div>
+        <button type="submit" class="btn btn-y" style="width:100%" id="mbc-submit">Request reservation</button>
+      </form>
+      <div class="summary">
+        <span style="color:#D6D7D3">Your order</span>
+        <h3 id="mbc-r-title" style="font-stretch:110%"></h3>
+        <div class="lines" id="mbc-r-lines"></div>
+        <div class="row" style="border:0;font-size:20px"><span>Rental total</span><strong id="mbc-r-total"></strong></div>
+        <div class="pay">
+          <div class="row"><span>Due to reserve</span><strong>$50 deposit</strong></div>
+          <div class="row"><span>Due by drop-off date</span><strong id="mbc-r-due"></strong></div>
+        </div>
+        <p style="font-size:15px;color:#D6D7D3">The $50 deposit is refunded after your bins are picked up with only normal moving wear. Full payment for the rental must be made by your drop-off date. Estimate before tax.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ================= CONFIRMATION ================= -->
+<div id="mbc-done" hidden>
+  <section class="wrap" style="max-width:760px;padding-top:120px;padding-bottom:120px">
+    <h1 style="font-stretch:115%;font-size:clamp(36px,5vw,52px);margin-bottom:24px">Reservation requested</h1>
+    <p style="font-size:19px;margin-bottom:24px" id="mbc-done-msg"></p>
+    <div class="card" style="padding:28px;margin-bottom:24px" id="mbc-done-lines"></div>
+    <div style="display:flex;gap:16px;flex-wrap:wrap">
+      <a class="btn btn-y" id="mbc-deposit" href="#" target="_blank" rel="noopener" hidden>Pay $50 deposit</a>
+      <button type="button" class="btn btn-d" data-go="site">Back to the site</button>
+    </div>
+  </section>
+</div>
+
+<!-- ================= FOOTER ================= -->
+<footer class="dark">
+  <div class="wrap grid cols-auto">
+    <div><span class="big">Milwaukee Bin Co</span><span class="muted">Moving tote rental based in Wauwatosa, serving the Milwaukee area.</span></div>
+    <div><strong>Call or text</strong><a id="mbc-tel" href="#" style="font-size:20px;font-weight:700"><span data-mbc="phone"></span></a><br><a id="mbc-mail" href="#" style="color:var(--white)"><span data-mbc="email"></span></a></div>
+    <div><strong>Hours</strong><span class="muted"><span data-mbc="hours"></span><br>Self-pickup: <span data-mbc="address"></span>, Wauwatosa, WI</span></div>
+  </div>
+  <div class="wrap legal">© 2026 Milwaukee Bin Co. HDX is a brand of The Home Depot; Milwaukee Bin Co is not affiliated with The Home Depot.</div>
+</footer>
+
+</div><!-- /#mbc -->
+
+<script>
+(function () {
+  var C = window.MBC_CONFIG || {};
+  var root = document.getElementById('mbc');
+  if (!root) return;
+  var $ = function (id) { return document.getElementById(id); };
+
+  // ---- Prices (edit here if they change) ----
+  var PACKAGES = [
+    { name: 'Studio',    price: 99,  bins: 20, big: 12, small: 8,  dollies: '1 dolly' },
+    { name: '1 bedroom', price: 129, bins: 30, big: 18, small: 12, dollies: '1 dolly' },
+    { name: '2 bedroom', price: 180, bins: 45, big: 27, small: 18, dollies: '2 dollies' },
+    { name: '3 bedroom', price: 275, bins: 60, big: 36, small: 24, dollies: '2 dollies' },
+    { name: '4 bedroom', price: 375, bins: 80, big: 48, small: 32, dollies: '3 dollies' }
+  ];
+  var EXTRA_BIN = 7, EXTRA_WEEK_PER_BIN = 1, TRIP = 60;
+  var DROP = [
+    { id: 1, label: 'Delivered, within 30 min of Milwaukee' },
+    { id: 2, label: 'Delivered, 30+ min away ($60)' },
+    { id: 3, label: 'I\u2019ll pick up in Wauwatosa' }
+  ];
+  var PICK = [
+    { id: 1, label: 'Picked up, within 30 min of Milwaukee' },
+    { id: 2, label: 'Picked up, 30+ min away ($60)' },
+    { id: 3, label: 'I\u2019ll return in Wauwatosa' }
+  ];
+  var s = { pkg: 1, drop: 1, pick: 1, bins: 0, weeks: 0 };
+
+  // fill contact placeholders
+  root.querySelectorAll('[data-mbc]').forEach(function (el) { el.textContent = C[el.getAttribute('data-mbc')] || ''; });
+  if (C.phone) $('mbc-tel').href = 'tel:' + C.phone.replace(/[^0-9+]/g, '');
+  if (C.email) $('mbc-mail').href = 'mailto:' + C.email;
+
+  var el = function (tag, cls, text) { var e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+
+  // package cards
+  PACKAGES.forEach(function (p) {
+    var c = el('div', 'pkg');
+    c.appendChild(el('div', 'name', p.name));
+    c.appendChild(el('div', 'price', '$' + p.price));
+    var m = el('div', 'mix'); var b = el('strong', null, p.bins + ' bins'); m.appendChild(b); m.appendChild(document.createElement('br'));
+    m.appendChild(document.createTextNode(p.big + ' \u00d7 27 gal, ' + p.small + ' \u00d7 17 gal')); c.appendChild(m);
+    c.appendChild(el('div', 'dol', p.dollies));
+    $('mbc-pkgs').appendChild(c);
+  });
+
+  function buildOpts(boxId, list, key) {
+    var box = $(boxId);
+    list.forEach(function (o, i) {
+      var b = el('button', 'opt', o.label || o.name); b.type = 'button';
+      b.addEventListener('click', function () { s[key] = o.id != null ? o.id : i; render(); });
+      b._val = o.id != null ? o.id : i; box.appendChild(b);
+    });
+  }
+  buildOpts('mbc-opt-pkg', PACKAGES, 'pkg');
+  buildOpts('mbc-opt-drop', DROP, 'drop');
+  buildOpts('mbc-opt-pick', PICK, 'pick');
+
+  root.querySelectorAll('[data-step]').forEach(function (b) {
+    b.addEventListener('click', function () {
+      var k = b.getAttribute('data-step'), d = Number(b.getAttribute('data-d'));
+      var max = k === 'bins' ? 100 : 8;
+      s[k] = Math.max(0, Math.min(max, s[k] + d)); render();
+    });
+  });
+
+  function calc() {
+    var p = PACKAGES[s.pkg];
+    var dropFee = s.drop === 2 ? TRIP : 0, pickFee = s.pick === 2 ? TRIP : 0;
+    var bins = p.bins + s.bins, weeks = 2 + s.weeks;
+    var lines = [
+      [p.name + ' package, ' + p.bins + ' bins', p.price],
+      [s.drop === 3 ? 'You pick up in Wauwatosa' : (s.drop === 2 ? 'Drop-off trip charge' : 'Drop-off'), dropFee],
+      [s.pick === 3 ? 'You return in Wauwatosa' : (s.pick === 2 ? 'Pick-up trip charge' : 'Pick-up'), pickFee]
+    ];
+    if (s.bins) lines.push([s.bins + ' extra bins', s.bins * EXTRA_BIN]);
+    if (s.weeks) lines.push([s.weeks + ' extra week' + (s.weeks > 1 ? 's' : '') + ' \u00d7 ' + bins + ' bins', s.weeks * bins * EXTRA_WEEK_PER_BIN]);
+    var total = lines.reduce(function (a, l) { return a + l[1]; }, 0);
+    return { p: p, bins: bins, weeks: weeks, lines: lines, total: total,
+      title: p.name + ', ' + bins + ' bins for ' + weeks + ' weeks' };
+  }
+  function money(n) { return n === 0 ? 'Free' : '$' + n; }
+  function drawLines(boxId, lines) {
+    var box = $(boxId); box.innerHTML = '';
+    lines.forEach(function (l) { var r = el('div', 'row'); r.appendChild(el('span', null, l[0])); r.appendChild(el('strong', null, money(l[1]))); box.appendChild(r); });
+  }
+
+  function render() {
+    [['mbc-opt-pkg', 'pkg'], ['mbc-opt-drop', 'drop'], ['mbc-opt-pick', 'pick']].forEach(function (x) {
+      Array.prototype.forEach.call($(x[0]).children, function (b) { b.setAttribute('aria-pressed', b._val === s[x[1]] ? 'true' : 'false'); });
+    });
+    $('mbc-xbins').textContent = s.bins; $('mbc-xweeks').textContent = s.weeks;
+    var q = calc();
+    $('mbc-total').textContent = '$' + q.total;
+    $('mbc-due').textContent = '$' + q.total;
+    $('mbc-sum').textContent = q.bins + ' bins for ' + q.weeks + ' weeks';
+    drawLines('mbc-lines', q.lines);
+    $('mbc-r-title').textContent = q.title;
+    drawLines('mbc-r-lines', q.lines);
+    $('mbc-r-total').textContent = '$' + q.total;
+    $('mbc-r-due').textContent = '$' + q.total;
+    $('mbc-drop-note').hidden = s.drop !== 3;
+  }
+
+  function show(which) {
+    $('mbc-site').hidden = which !== 'site';
+    $('mbc-reserve').hidden = which !== 'reserve';
+    $('mbc-done').hidden = which !== 'done';
+    var target = which === 'site' ? $('mbc-quote') : root;
+    try { target.scrollIntoView(); } catch (e) {}
+  }
+  $('mbc-go-reserve').addEventListener('click', function () { show('reserve'); });
+  root.querySelectorAll('[data-go="site"]').forEach(function (b) { b.addEventListener('click', function () { show('site'); }); });
+
+  var d = new Date(), pad = function (n) { return (n < 10 ? '0' : '') + n; };
+  var today = d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate());
+  $('mbc-dropDate').min = today;
+
+  $('mbc-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    var f = {};
+    ['dropAddress', 'dropDate', 'pickAddress', 'name', 'phone', 'email'].forEach(function (k) { f[k] = $('mbc-' + k).value.trim(); });
+    var missing = [];
+    if (s.drop !== 3 && !f.dropAddress) missing.push('drop-off address');
+    if (!f.dropDate) missing.push('date you need them');
+    if (!f.name) missing.push('name');
+    if (!f.phone) missing.push('phone');
+    var err = $('mbc-err');
+    if (missing.length) { err.textContent = 'Add your ' + missing.join(', ') + ' to request a reservation.'; err.hidden = false; return; }
+    if (f.dropDate < today) { err.textContent = 'Pick a drop-off date of today or later.'; err.hidden = false; return; }
+    err.hidden = true;
+
+    var q = calc();
+    var parts = f.dropDate.split('-');
+    var dateText = new Date(+parts[0], +parts[1] - 1, +parts[2]).toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric', year: 'numeric' });
+    var payload = {
+      _subject: 'New bin reservation: ' + f.name + ' (' + dateText + ')',
+      name: f.name, phone: f.phone, email: f.email,
+      order: q.title,
+      getting_bins: DROP[s.drop - 1].label, returning_bins: PICK[s.pick - 1].label,
+      drop_off_address: f.dropAddress || '(picking up in Wauwatosa)',
+      drop_off_date: dateText, pick_up_address: f.pickAddress,
+      breakdown: q.lines.map(function (l) { return l[0] + ': ' + money(l[1]); }).join(' | '),
+      rental_total: '$' + q.total
+    };
+
+    function done() {
+      $('mbc-done-msg').textContent = 'Thanks, ' + f.name + '. We\u2019ll contact you at ' + f.phone + ' to confirm your reservation. Your $50 refundable deposit holds your bins and date.';
+      var box = $('mbc-done-lines'); box.innerHTML = '';
+      [['Order', q.title], ['Drop-off', f.dropAddress || 'You pick up in Wauwatosa'], ['Date', dateText], ['Due by drop-off date', '$' + q.total]].forEach(function (r) {
+        var row = el('div', 'row'); row.appendChild(el('span', 'muted', r[0])); row.appendChild(el('strong', null, r[1])); box.appendChild(row);
+      });
+      var dep = $('mbc-deposit');
+      if (C.depositLink) { dep.href = C.depositLink; dep.hidden = false; }
+      show('done');
+    }
+
+    var btn = $('mbc-submit');
+    if (!C.formEndpoint) {
+      var body = Object.keys(payload).filter(function (k) { return k !== '_subject'; }).map(function (k) { return k.replace(/_/g, ' ') + ': ' + payload[k]; }).join('\n');
+      if (C.email) window.location.href = 'mailto:' + C.email + '?subject=' + encodeURIComponent(payload._subject) + '&body=' + encodeURIComponent(body);
+      done(); return;
+    }
+    btn.disabled = true; btn.textContent = 'Sending\u2026';
+    fetch(C.formEndpoint, { method: 'POST', headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }, body: JSON.stringify(payload) })
+      .then(function (r) { if (!r.ok) throw new Error(); done(); })
+      .catch(function () { err.textContent = 'Your request didn\u2019t go through. Call or text ' + (C.phone || 'us') + ' and we\u2019ll book it for you.'; err.hidden = false; })
+      .then(function () { btn.disabled = false; btn.textContent = 'Request reservation'; });
+  });
+
+  render();
+})();
+</script>
+</body>
+</html>
