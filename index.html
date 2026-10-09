@@ -23,7 +23,8 @@ window.MBC_CONFIG = {
   hours: "By appointment",          // delivery / pickup hours
   replacementFee: "$12",              // fee per bin damaged beyond normal wear
   formEndpoint: "https://formspree.io/f/xyekwldp",                    // Formspree URL, e.g. https://formspree.io/f/abcdwxyz
-  depositLink: ""                      // Square or Stripe $50 payment link
+  depositLink: "",                     // fallback: a Stripe $50 Payment Link (unused when checkoutEndpoint is set)
+  checkoutEndpoint: "/api/create-deposit-checkout" // Stripe Checkout for the $50 deposit
   // --------------------------------------------------------
 };
 </script>
@@ -409,7 +410,7 @@ body{margin:0;background:#1F2023}
     <p style="font-size:19px;margin-bottom:24px" id="mbc-done-msg"></p>
     <div class="card" style="padding:28px;margin-bottom:24px" id="mbc-done-lines"></div>
     <div style="display:flex;gap:16px;flex-wrap:wrap">
-      <a class="btn btn-y" id="mbc-deposit" href="#" target="_blank" rel="noopener" hidden>Pay $50 deposit</a>
+      <a class="btn btn-y" id="mbc-deposit" href="#" hidden>Pay $50 deposit</a>
       <button type="button" class="btn btn-d" data-go="site">Back to the site</button>
     </div>
   </section>
@@ -580,7 +581,21 @@ body{margin:0;background:#1F2023}
         var row = el('div', 'row'); row.appendChild(el('span', 'muted', r[0])); row.appendChild(el('strong', null, r[1])); box.appendChild(row);
       });
       var dep = $('mbc-deposit');
-      if (C.depositLink) { dep.href = C.depositLink; dep.hidden = false; }
+      if (C.checkoutEndpoint) {
+        dep.href = '#'; dep.hidden = false;
+        dep.onclick = function (ev) {
+          ev.preventDefault();
+          if (dep.getAttribute('aria-busy') === 'true') return;
+          dep.setAttribute('aria-busy', 'true'); dep.textContent = 'Opening secure checkout\u2026';
+          fetch(C.checkoutEndpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) })
+            .then(function (r) { return r.json().then(function (j) { if (!r.ok || !j.url) throw new Error(); return j; }); })
+            .then(function (j) { window.location.href = j.url; })
+            .catch(function () {
+              dep.removeAttribute('aria-busy'); dep.textContent = 'Pay $50 deposit';
+              $('mbc-done-msg').textContent = 'We couldn\u2019t open checkout just now. Your reservation request was sent, and we\u2019ll text you a payment link at ' + f.phone + '.';
+            });
+        };
+      } else if (C.depositLink) { dep.href = C.depositLink; dep.target = '_blank'; dep.rel = 'noopener'; dep.hidden = false; }
       show('done');
     }
 
@@ -598,6 +613,19 @@ body{margin:0;background:#1F2023}
   });
 
   render();
+
+  // Returning from Stripe Checkout
+  var depositState = new URLSearchParams(window.location.search).get('deposit');
+  if (depositState === 'paid' || depositState === 'cancelled') {
+    var paid = depositState === 'paid';
+    $('mbc-done').querySelector('h1').textContent = paid ? 'Deposit received' : 'Deposit not paid yet';
+    $('mbc-done-msg').textContent = paid
+      ? 'Thanks! Your $50 refundable deposit is in, and your bins and date are held. You\u2019ll get a receipt by email, and we\u2019ll be in touch to confirm drop-off.'
+      : 'No charge was made. Your reservation request was still sent, so we\u2019ll reach out, or call or text ' + (C.phone || 'us') + ' to finish booking.';
+    $('mbc-done-lines').hidden = true;
+    show('done');
+    try { history.replaceState(null, '', window.location.pathname); } catch (e) {}
+  }
 })();
 </script>
 </body>

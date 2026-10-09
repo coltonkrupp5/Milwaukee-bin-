@@ -1,0 +1,11 @@
+{
+  "name": "milwaukee-bin-co",
+  "private": true,
+  "description": "Milwaukee Bin Co site with a Stripe Checkout function for the $50 reservation deposit",
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "stripe": "^23.0.0"
+  }
+}
