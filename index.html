@@ -19,9 +19,9 @@ window.MBC_CONFIG = {
   // ---- EDIT THESE ----------------------------------------
   phone: "(920) 251-8979",                // your phone number
   email: "info@milwaukeebinco.com",   // your email
-  address: "[YOUR ADDRESS]",         // Wauwatosa pickup address (street only)
-  hours: "[YOUR HOURS]",          // delivery / pickup hours
-  replacementFee: "[FEE]",              // fee per bin damaged beyond normal wear
+  address: "1305 N 119th St",         // Wauwatosa pickup address (street only)
+  hours: "By appointment",          // delivery / pickup hours
+  replacementFee: "$12",              // fee per bin damaged beyond normal wear
   formEndpoint: "",                    // Formspree URL, e.g. https://formspree.io/f/abcdwxyz
   depositLink: ""                      // Square or Stripe $50 payment link
   // --------------------------------------------------------
@@ -281,7 +281,7 @@ body{margin:0;background:#1F2023}
       <div><strong>Extra bins</strong><span>$7 each, added to any package for the same two weeks.</span></div>
       <div><strong>Extra weeks</strong><span>$1 per bin, per week. Let us know before your pick-up day.</span></div>
       <div><strong>$50 refundable deposit</strong><span>Holds your bins and date. Full payment is due by your drop-off date.</span></div>
-      <div><strong>Bins only, self-pickup</strong><span>$2 per 17 gal and $2.50 per 27 gal each week, 10-bin minimum, from our Wauwatosa location.</span></div>
+      <div><strong>Bins only, self-pickup</strong><span>$2 per 17 gal and $2.50 per 27 gal each week, 10-bin minimum, from our Wauwatosa location by appointment.</span></div>
     </div>
   </div>
 </section>
@@ -338,7 +338,7 @@ body{margin:0;background:#1F2023}
         <div class="row"><span>Due by drop-off date</span><strong id="mbc-due">$0</strong></div>
       </div>
       <button type="button" class="btn btn-y" id="mbc-go-reserve">Reserve these bins</button>
-      <p class="fine">Estimate before tax. Bins damaged beyond normal moving wear carry a <span data-mbc="replacementFee"></span> replacement charge per bin.</p>
+      <p class="fine">Estimate before tax. Bins damaged or broken beyond normal moving wear carry a <span data-mbc="replacementFee"></span> replacement charge per bin.</p>
     </div>
   </div>
 </section>
@@ -420,7 +420,7 @@ body{margin:0;background:#1F2023}
   <div class="wrap grid cols-auto">
     <div><span class="big">Milwaukee Bin Co</span><span class="muted">Moving tote rental based in Wauwatosa, serving the Milwaukee area.</span></div>
     <div><strong>Call or text</strong><a id="mbc-tel" href="#" style="font-size:20px;font-weight:700"><span data-mbc="phone"></span></a><br><a id="mbc-mail" href="#" style="color:var(--white)"><span data-mbc="email"></span></a></div>
-    <div><strong>Hours</strong><span class="muted"><span data-mbc="hours"></span><br>Self-pickup: <span data-mbc="address"></span>, Wauwatosa, WI</span></div>
+    <div><strong>Hours</strong><span class="muted"><span data-mbc="hours"></span><br>Self-pickup: <span data-mbc="address"></span>, Wauwatosa, WI 53226</span></div>
   </div>
   <div class="wrap legal">© 2026 Milwaukee Bin Co. HDX is a brand of The Home Depot; Milwaukee Bin Co is not affiliated with The Home Depot.</div>
 </footer>
